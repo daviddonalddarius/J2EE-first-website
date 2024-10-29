@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Login Page</title>
+  <style>
+  /* styles.css */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f5f5f5;
+  color: #333;
+}
+
+.container {
+  display: flex;
+  width: 100vw;
+  height: 100vh;
+}
+
+.left-section {
+  background-color: #f5f5f5;
+  width: 40%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+}
+
+.login-text {
+  font-size: 4em;
+  color: #000;
+}
+
+.signup-text {
+  font-size: 2em;
+  color: #888;
+  margin-top: 10px;
+}
+
+.right-section {
+  width: 60%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 0 50px;
+}
+
+.form-title {
+  font-weight: 500;
+  font-size: 1em;
+  color: #888;
+  margin-bottom: 20px;
+}
+
+form {
+  width: 100%;
+  max-width: 400px;
+}
+
+.input-group {
+  margin-bottom: 20px;
+}
+
+label {
+  font-size: 0.8em;
+  color: #888;
+  display: block;
+  margin-bottom: 5px;
+}
+
+input[type="email"],
+input[type="password"] {
+  width: 100%;
+  padding: 10px;
+  font-size: 1em;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+}
+
+.eye-icon {
+  position: absolute;
+  right: 10px;
+  top: 34px;
+  cursor: pointer;
+}
+
+.links {
+  display: flex;
+  align-items: center;
+  font-size: 0.8em;
+  color: #888;
+  margin-bottom: 30px;
+}
+
+.forgot-link,
+.google-link {
+  color: #888;
+  text-decoration: none;
+  margin: 0 5px;
+}
+
+.forgot-link:hover,
+.google-link:hover {
+  text-decoration: underline;
+}
+
+.login-button {
+  width: 100%;
+  padding: 10px;
+  font-size: 1em;
+  background-color: #000;
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  text-transform: uppercase;
+}
+
+.login-button:hover {
+  background-color: #333;
+}
+  
+  </style>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="container">
+    <div class="left-section">
+      <h1 class="login-text">LOG IN</h1>
+      <h2 class="signup-text">SIGN UP</h2>
+    </div>
+    <div class="right-section">
+      <h3 class="form-title">LOG IN ACCOUNT</h3>
+      <form action="#" method="post">
+        <div class="input-group">
+          <label for="email">EMAIL</label>
+          <input type="email" id="email" name="email" required>
+        </div>
+        <div class="input-group">
+          <label for="password">PASSWORD</label>
+          <input type="password" id="password" name="password" required>
+          <span class="eye-icon">👁️</span> <!-- Placeholder icon -->
+        </div>
+        <div class="links">
+          <a href="#" class="forgot-link">Forgot password?</a>
+          <span>|</span>
+          <a href="#" class="google-link">Previously logged in with Google? Add a password </a>
+        </div>
+        <button type="submit" class="login-button">LOG IN</button>
+      </form>
+    </div>
+  </div>
+</body>
+</html>
