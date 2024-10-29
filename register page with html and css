@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Registration Form</title>
+<style>
+    /* Basic Reset */
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        font-family: Arial, sans-serif;
+    }
+
+    /* Background Styling */
+     body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 10px;
+            background-image: url('https://images.rawpixel.com/image_800/cHJpdmF0ZS9sci9pbWFnZXMvd2Vic2l0ZS8yMDIyLTA1L3BmLWx1a2VzdGFja3Bvb2xlMi1qdW5nbGUtcGF0aC1uei1qai1qb2I1NzEtMi5qcGc.jpg'); /* Replace with your image URL */
+            background-size: cover; /* Cover the entire background */
+            background-position: center; /* Center the background */
+            display: flex; /* Use flexbox for centering */
+            justify-content: center; /* Center horizontally */
+            align-items: center; /* Center vertically */
+            height: 200vh; /* Full height of the viewport */
+            
+        }
+
+    /* Form Container Styling */
+    .form-container {
+        width: 90%;
+        max-width: 500px;
+        padding: 20px;
+        background: #ffffff;
+        box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.1);
+        border-radius: 10px;
+    }
+
+    .form-container h2 {
+        text-align: center;
+        color: #6e45e2;
+        margin-bottom: 20px;
+        font-size: 24px;
+    }
+
+    /* Input Field Styling */
+    .form-group {
+        margin-bottom: 15px;
+    }
+
+    .form-group label {
+        font-size: 14px;
+        color: #6e45e2;
+    }
+
+    .form-group input,
+    .form-group select,
+    .form-group textarea {
+        width: 100%;
+        padding: 10px;
+        margin-top: 5px;
+        border-radius: 5px;
+        border: 1px solid #ccc;
+        font-size: 14px;
+        color: #333;
+    }
+
+    .form-group input:focus,
+    .form-group select:focus,
+    .form-group textarea:focus {
+        border-color: #6e45e2;
+        outline: none;
+    }
+
+    /* Gender Radio Buttons */
+    .gender-group {
+        display: flex;
+        gap: 15px;
+        margin-top: 5px;
+    }
+
+    .gender-group label {
+        font-size: 14px;
+        color: #6e45e2;
+    }
+
+    /* Submit Button */
+    .submit-btn {
+        width: 100%;
+        padding: 10px;
+        background: #6e45e2;
+        border: none;
+        color: #fff;
+        font-size: 16px;
+        cursor: pointer;
+        transition: background 0.3s ease;
+        border-radius: 5px;
+        text-transform: uppercase;
+    }
+
+    .submit-btn:hover {
+        background: #5740c3;
+    }
+
+</style>
+</head>
+<body>
+    <div class="form-container">
+        <h2>Registration Form</h2>
+        <form action="#" method="POST">
+            <!-- First Name -->
+            <div class="form-group">
+                <label for="first-name">First Name:</label>
+                <input type="text" id="first-name" name="first_name" required>
+            </div>
+
+            <!-- Last Name -->
+            <div class="form-group">
+                <label for="last-name">Last Name:</label>
+                <input type="text" id="last-name" name="last_name" required>
+            </div>
+
+            <!-- Email -->
+            <div class="form-group">
+                <label for="email">Email ID:</label>
+                <input type="email" id="email" name="email" required>
+            </div>
+
+            <!-- Password -->
+            <div class="form-group">
+                <label for="password">Password:</label>
+                <input type="password" id="password" name="password" required>
+            </div>
+
+            <!-- Phone Number -->
+            <div class="form-group">
+                <label for="phone">Phone Number:</label>
+                <input type="tel" id="phone" name="phone" required>
+            </div>
+
+            <!-- Gender -->
+            <div class="form-group">
+                <label>Gender:</label>
+                <div class="gender-group">
+                    <label><input type="radio" name="gender" value="male" required> Male</label>
+                    <label><input type="radio" name="gender" value="female" required> Female</label>
+                    <label><input type="radio" name="gender" value="other" required> Other</label>
+                </div>
+            </div>
+
+            <!-- Courses -->
+            <div class="form-group">
+                <label for="courses">Courses:</label>
+                <select id="courses" name="courses" required>
+                    <option value="">Select Course</option>
+                    <option value="web_dev">Web Development</option>
+                    <option value="data_science">Data Science</option>
+                    <option value="ui_ux">UI/UX Design</option>
+                    <option value="cloud">Cloud Computing</option>
+                </select>
+            </div>
+
+            <!-- City -->
+            <div class="form-group">
+                <label for="city">City:</label>
+                <input type="text" id="city" name="city" required>
+            </div>
+
+            <!-- Trainers (Multiple Select) -->
+            <div class="form-group">
+                <label for="trainers">Trainers:</label>
+                <select id="trainers" name="trainers" multiple size="3" required>
+                    <option value="john">Rakesh</option>
+                    <option value="jane">Jebasta</option>
+                    <option value="alex">Sivaranjani</option>
+                    <option value="maria">Suresh</option>
+                </select>
+            </div>
+
+            <!-- Submit Button -->
+            <button type="submit" class="submit-btn">Register</button>
+        </form>
+    </div>
+</body>
+</html>
